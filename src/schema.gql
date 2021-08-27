@@ -1,0 +1,37 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Producto {
+  id: Int!
+  nombre: String!
+  categoria: String
+  precio: Float!
+  stock: Float!
+}
+
+type Query {
+  getProducto(id: Int!): Producto!
+  productos: [Producto!]!
+}
+
+type Mutation {
+  crearProducto(crearProductoInput: CrearProductoInput!): Producto!
+  editarProducto(editarProductoInput: EditarProductoInput!): Producto!
+  eliminarProducto(id: Int!): Producto!
+}
+
+input CrearProductoInput {
+  nombre: String!
+  categoria: String
+  precio: Float!
+  stock: Float!
+}
+
+input EditarProductoInput {
+  nombre: String
+  categoria: String
+  precio: Float
+  stock: Float
+  id: Int!
+}
